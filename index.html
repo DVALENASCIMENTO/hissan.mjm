@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hissan - Método Japonês de Multiplicação</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Hissan - Método Japonês de Multiplicação</h1>
+
+  <div class="inputs">
+  <div class="input-group">
+    <label for="numero1">Multiplicando</label>
+    <input type="number" id="numero1" placeholder="Número 1" min="0" max="9999">
+  </div>
+
+  <div class="input-group">
+    <label for="numero2">Multiplicador</label>
+    <input type="number" id="numero2" placeholder="Número 2" min="0" max="9999">
+  </div>
+
+  <button onclick="gerarLinhas()">Gerar Linhas</button>
+</div>
+
+
+  <div class="diagram-container">
+    <div class="label-left">Multiplicador</div>
+    <div class="grid-container">
+      <div class="label-top">Multiplicando</div>
+      <div id="grid"></div>
+    </div>
+  </div>
+
+  <div class="resultado">
+    <input type="text" id="resultado" placeholder="Digite o resultado final">
+    <button onclick="exportar()">Exportar Imagem</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
