@@ -80,26 +80,28 @@ function gerarLinhas() {
 
   if (!n1 || !n2) return;
 
-  const digitos1 = n1.toString().split('').map(Number);
-  const digitos2 = n2.toString().split('').map(Number);
+  // Garante que sempre teremos 3 dígitos
+  const digitos1 = n1.toString().padStart(3, '0').split('').map(Number);
+  const digitos2 = n2.toString().padStart(3, '0').split('').map(Number);
 
-  const offsetX = 2;
-  const offsetY = 2;
+  const offsetX = 2; // margem inicial horizontal
+  const offsetY = 2; // margem inicial vertical
+  const espacamento = 4; // espaçamento entre blocos
 
-  // Grupo de linhas diagonais descendentes (\) — representado com verticais espaçadas
+  // Linhas verticais (↘️) para os dígitos de n1
   for (let i = 0; i < digitos1.length; i++) {
     const valor = digitos1[i];
     for (let l = 0; l < valor; l++) {
-      const x = offsetX + i * 3 + l;
+      const x = offsetX + i * espacamento + l;
       if (x < gridSize) vertical[x] = true;
     }
   }
 
-  // Grupo de linhas diagonais ascendentes (/) — representado com horizontais espaçadas
+  // Linhas horizontais (↙️) para os dígitos de n2
   for (let j = 0; j < digitos2.length; j++) {
     const valor = digitos2[j];
     for (let l = 0; l < valor; l++) {
-      const y = offsetY + j * 3 + l;
+      const y = offsetY + j * espacamento + l;
       if (y < gridSize) horizontal[y] = true;
     }
   }
