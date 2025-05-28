@@ -121,3 +121,26 @@ function exportar() {
 
 // Inicializa a grade ao carregar
 criarGrade();
+
+function verificarResultado() {
+  const n1 = parseInt(document.getElementById("numero1").value);
+  const n2 = parseInt(document.getElementById("numero2").value);
+  const resultadoUsuario = parseInt(document.getElementById("resultado").value);
+  const mensagem = document.getElementById("mensagemResultado");
+
+  if (isNaN(n1) || isNaN(n2) || isNaN(resultadoUsuario)) {
+    mensagem.textContent = "Por favor, preencha todos os campos.";
+    mensagem.style.color = "orange";
+    return;
+  }
+
+  const produtoCorreto = n1 * n2;
+
+  if (resultadoUsuario === produtoCorreto) {
+    mensagem.textContent = `✅ Correto! ${n1} × ${n2} = ${produtoCorreto}`;
+    mensagem.style.color = "green";
+  } else {
+    mensagem.textContent = `❌ Errado. ${n1} × ${n2} = ${produtoCorreto}, não ${resultadoUsuario}`;
+    mensagem.style.color = "red";
+  }
+}
