@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  background-color: #fdfdf9; /* tom mais suave */
+  background-color: #ffffff; /* tom mais suave */
   color: #1c1c1c;
   padding: 20px;
   line-height: 1.6;
@@ -15,8 +15,6 @@ body {
 
 header img {
   width: 140px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.1));
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -24,10 +22,9 @@ header img {
 
 h1 {
   text-align: center;
-  font-family: 'Noto Serif JP', serif;
-  color: #e60026;
-  margin-bottom: 10px;
-  font-size: 2rem;
+  font-family: 'Reggae One', cursive;
+  color: #ff0000;
+  font-size: 4rem;
 }
 
 h2 {
@@ -71,7 +68,7 @@ h2 {
 
 .inputs button {
   padding: 10px 20px;
-  background-color: #e60026;
+  background-color: #ff0000;
   color: white;
   border: none;
   border-radius: 6px;
@@ -119,7 +116,7 @@ h2 {
   top: 0;
   width: 2px;
   height: 100%;
-  background-color: #e60026;
+  background-color: #ff0000;
   transform: translateX(-50%);
 }
 
@@ -179,7 +176,7 @@ h2 {
 
 .resultado button {
   padding: 10px 20px;
-  background-color: #2a4073;
+  background-color: #ff0000;
   color: white;
   border: none;
   border-radius: 6px;
@@ -190,7 +187,7 @@ h2 {
 }
 
 .resultado button:hover {
-  background-color: #1c2d4f;
+  background-color: #9e0000;
 }
 
 #mensagemResultado {
